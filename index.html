@@ -3,152 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pulsul Vieții - Platformă Pacienți & Medici</title>
+  <title>Pulsul Vieții - AI pentru sănătate</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- 🔷 HEADER -->
-  <header class="header">
-    <div class="logo">🩺 <span>Pulsul Vieții</span></div>
-    <nav>
+  <!-- HEADER -->
+  <header class="header neon-border">
+    <div class="logo">
+      <span class="pulse-heart">💓</span>
+      <h1 class="neon-text">Pulsul Vieții</h1>
+    </div>
+    <p class="tagline">AI pentru sănătate — Inovație, grijă și accesibilitate pentru toți</p>
+    <nav class="navbar">
       <a href="#despre">Despre</a>
-      <a href="#pachete">Pachete</a>
-      <a href="#medici">Medici</a>
-      <a href="#pacienti">Pacienți</a>
-      <a href="#chatbot">ChatBot</a>
+      <a href="#problema">Problema actuală</a>
+      <a href="#structura">Structura aplicației</a>
+      <a href="#abonamente">Abonamente</a>
+      <a href="#impact">Impact</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- 🔷 HERO SECTION -->
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Conectăm pacienții cu medicii potriviți</h1>
-      <p>Platforma modernă care reunește pacienți, medici și clinici din toate specializările, oferind acces rapid la consultații, analize și recomandări personalizate.</p>
-      <div class="buttons">
-        <a href="#pacienti" class="btn primary">Înscriere Pacient</a>
-        <a href="#medici" class="btn secondary">Înscriere Medic</a>
+      <h2>Inovația care salvează timp, vieți și resurse</h2>
+      <p>O aplicație care conectează pacienții, medicii și tehnologia — cu scopul de a transforma sistemul medical într-unul mai eficient și uman.</p>
+      <a href="#abonamente" class="btn primary">Află mai multe</a>
+    </div>
+  </section>
+
+  <!-- DESPRE -->
+  <section id="despre" class="content-section">
+    <h2>Despre viitoarea noastră aplicație</h2>
+    <p><strong>Data:</strong> 16 octombrie 2025</p>
+    <p>Am ales numele <strong>„Pulsul Vieții”</strong> deoarece este ușor de memorat și transmite un mesaj universal: grija pentru fiecare bătaie de inimă. Aplicația este destinată tuturor, indiferent de vârstă sau nivel de cunoștințe digitale — pentru ca sănătatea să fie accesibilă oricui.</p>
+  </section>
+
+  <!-- PROBLEMA ACTUALĂ -->
+  <section id="problema" class="content-section alt">
+    <h2>De ce este nevoie de „Pulsul Vieții”?</h2>
+    <p>Într-un sistem medical suprasolicitat, pacienții pierd ore prețioase în trafic sau la cozi. Mulți evită controalele din teama de aglomerație sau lipsa timpului. 
+      <br><br>„Pulsul Vieții” reduce anxietatea și riscul de infecții prin consultanță online, oferind sfaturi rapide, monitorizare 24/7 și acces la medici reali. 
+      <br>Un sfat dat la timp de un medic poate salva o viață. 💙</p>
+  </section>
+
+  <!-- STRUCTURA -->
+  <section id="structura" class="content-section">
+    <h2>Structura aplicației</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>🔐 Autentificare inteligentă</h3>
+        <p>Prin CNP, nume, număr de telefon și contact de urgență. Medicul poate accesa datele pacienților prin baza de date a spitalelor partenere, cu respectarea confidențialității.</p>
+      </div>
+      <div class="card">
+        <h3>🦻 Ghid audio & vizual</h3>
+        <p>Versiune complet audio pentru persoanele nevăzătoare și ghid pas cu pas pentru toți utilizatorii noi.</p>
+      </div>
+      <div class="card">
+        <h3>💬 Chat AI + Medici</h3>
+        <p>Simptomele sunt analizate de AI, apoi confirmate de medici reali disponibili 24/7. Răspunsuri rapide, empatice și corecte.</p>
+      </div>
+      <div class="card">
+        <h3>📱 Monitorizare zilnică</h3>
+        <p>Aplicația amintește de tratamente, verifică parametrii medicali (tensiune, glicemie) și oferă citate motivaționale pentru sănătatea mentală.</p>
       </div>
     </div>
   </section>
 
-  <!-- 🔷 DESPRE -->
-  <section id="despre" class="section light">
-    <h2>Ce este Pulsul Vieții?</h2>
-    <p>Pulsul Vieții este o platformă digitală dedicată tuturor sistemelor medicale – publice și private – care permite:</p>
-    <ul class="features">
-      <li>✔️ Conectarea pacienților cu medici certificați din diverse specializări.</li>
-      <li>✔️ Recomandări automate de analize și consultații pe baza simptomelor introduse.</li>
-      <li>✔️ Gestionarea planurilor medicale și a istoricului pacientului într-un singur loc.</li>
-    </ul>
-  </section>
-
-  <!-- 🔷 PACHETE -->
-  <section id="pachete" class="section">
-    <h2>Pachete de servicii</h2>
-    <p class="subtitle">Alege planul potrivit pentru nevoile tale medicale.</p>
+  <!-- ABONAMENTE -->
+  <section id="abonamente" class="content-section alt">
+    <h2>Abonamente disponibile</h2>
     <div class="plans">
       <div class="plan">
         <h3>Free</h3>
-        <p>Acces la chatbot și recomandări de bază.</p>
-        <h4>0 RON / lună</h4>
-        <button>Începe gratuit</button>
+        <p>Răspunsuri rapide AI + remedii naturiste.</p>
+        <p><strong>Gratuit</strong></p>
       </div>
       <div class="plan highlight">
-        <h3>Premium</h3>
-        <p>Consultații video și suport 24/7 cu specialiști.</p>
-        <h4>49 RON / lună</h4>
-        <button>Activează Premium</button>
+        <h3>Bronze</h3>
+        <p>Acces la ghiduri, reviste medicale, recomandări personalizate.</p>
+        <p><strong>29 RON / lună</strong></p>
       </div>
       <div class="plan">
-        <h3>Professional</h3>
-        <p>Acces prioritar, medic dedicat și rapoarte avansate.</p>
-        <h4>89 RON / lună</h4>
-        <button>Detalii</button>
+        <h3>Silver</h3>
+        <p>Chat cu medici, interpretare analize și monitorizare semne vitale.</p>
+        <p><strong>59 RON / lună</strong></p>
       </div>
-      <div class="plan">
-        <h3>Enterprise</h3>
-        <p>Solutii personalizate pentru clinici și spitale.</p>
-        <h4>Contactează-ne</h4>
-        <button>Solicită ofertă</button>
+      <div class="plan premium">
+        <h3>Gold</h3>
+        <p>Apel video 24/7, eliberare rețete, adeverințe, psiholog și nutriționist.</p>
+        <p><strong>99 RON / lună</strong></p>
       </div>
+    </div>
+
+    <div class="bonus-info">
+      <p>🎁 <strong>Gratuitate</strong> pentru persoane cu handicap, pensionari pe caz de boală și adolescenți orfani.</p>
+      <p>🎓 <strong>Reducere 20%</strong> pentru studenți.</p>
+      <p>❤️ <strong>Monitorizare gratuită</strong> pentru diabetici și hipertensivi prin dispozitive inteligente incluse.</p>
     </div>
   </section>
 
-  <!-- 🔷 INSCRIERE MEDICI -->
-  <section id="medici" class="section light">
-    <h2>Înscriere pentru medici</h2>
-    <p>Fii parte din rețeaua noastră profesională. Completează formularul pentru a-ți crea profilul medical.</p>
-    <form class="register-form">
-      <input type="text" placeholder="Nume complet" required>
-      <input type="email" placeholder="Email profesional" required>
-      <input type="text" placeholder="Specializare (ex: cardiologie)" required>
-      <button type="submit">Înregistrează-te</button>
-    </form>
+  <!-- IMPACT -->
+  <section id="impact" class="content-section">
+    <h2>Impact social și parteneriate</h2>
+    <p>„Pulsul Vieții” colaborează cu Ministerul Sănătății, spitale publice și private, dar și rețele de telefonie mobilă (Digi, Vodafone, Orange, Telekom) pentru a oferi aplicația preinstalată pe telefoanele persoanelor în vârstă.</p>
+    <p>Aplicația va fi disponibilă în toate limbile și va promova un mediu curat, digital și accesibil tuturor. 🌿</p>
   </section>
 
-  <!-- 🔷 INSCRIERE PACIENTI -->
-  <section id="pacienti" class="section">
-    <h2>Înscriere pentru pacienți</h2>
-    <p>Accesează rapid recomandări medicale și programează consultații online.</p>
-    <form class="register-form">
+  <!-- CONTACT -->
+  <section id="contact" class="content-section alt">
+    <h2>Contact & Parteneriate</h2>
+    <form class="contact-form">
       <input type="text" placeholder="Nume complet" required>
       <input type="email" placeholder="Email" required>
-      <input type="text" placeholder="CNP sau ID pacient" required>
-      <button type="submit">Creează cont</button>
+      <textarea placeholder="Mesajul tău..."></textarea>
+      <button type="submit" class="btn secondary">Trimite</button>
     </form>
   </section>
 
-  <!-- 🔷 CHATBOT -->
-  <section id="chatbot" class="section light">
-    <h2>Asistent medical virtual</h2>
-    <p>Scrie simptomele tale și primește recomandări automate pentru analize și specialități medicale potrivite.</p>
-    <div class="chatbox">
-      <div id="chatlog"></div>
-      <div class="chat-input">
-        <input type="text" id="userInput" placeholder="Descrie simptomele tale..." onkeydown="if(event.key==='Enter') sendMessage()">
-        <button onclick="sendMessage()">Trimite</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- 🔷 FOOTER -->
-  <footer>
-    <p>© 2025 Pulsul Vieții — Platformă dezvoltată pentru conectarea pacienților și medicilor. Toate drepturile rezervate.</p>
+  <!-- FOOTER -->
+  <footer class="footer neon-border">
+    <p>© 2025 Pulsul Vieții — Aplicație AI pentru sănătate | Toate drepturile rezervate</p>
   </footer>
-
-  <!-- 🔷 SCRIPT CHATBOT -->
-  <script>
-    function sendMessage() {
-      const input = document.getElementById("userInput");
-      const log = document.getElementById("chatlog");
-      const userText = input.value.trim();
-      if (userText === "") return;
-
-      log.innerHTML += `<div class='user-msg'>👤 <strong>Tu:</strong> ${userText}</div>`;
-      input.value = "";
-
-      let response = "🤖 Recomandăm un control medical general.";
-      const text = userText.toLowerCase();
-
-      if (text.includes("durere") || text.includes("febra") || text.includes("infectie")) {
-        response = "🤖 Posibilă infecție — recomandăm analize de sânge și consult la medic internist.";
-      } else if (text.includes("inima") || text.includes("tensiune") || text.includes("palpitatii")) {
-        response = "🤖 Recomandăm un consult cardiologic și un EKG.";
-      } else if (text.includes("stomac") || text.includes("greata") || text.includes("arsuri")) {
-        response = "🤖 Recomandăm analize gastroenterologice.";
-      } else if (text.includes("piele") || text.includes("iritatie") || text.includes("eczema")) {
-        response = "🤖 Recomandăm un consult dermatologic.";
-      }
-
-      setTimeout(() => {
-        log.innerHTML += `<div class='bot-msg'>${response}</div>`;
-        log.scrollTop = log.scrollHeight;
-      }, 400);
-    }
-  </script>
 
 </body>
 </html>
-
-
