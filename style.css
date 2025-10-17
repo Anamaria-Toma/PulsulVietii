@@ -1,78 +1,154 @@
+/* 🔷 RESET & STRUCTURĂ DE BAZĂ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
-  background: #f4f6f8;
+  background: #f7f9fb;
   color: #333;
+  line-height: 1.6;
 }
 
-header {
-  background: #0077cc;
+/* 🔷 HEADER */
+.header {
+  background: linear-gradient(90deg, #0077cc, #00b3b3);
   color: white;
-  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 10px;
-  font-weight: 500;
+  margin: 0 12px;
+  transition: 0.3s;
 }
 
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* 🔷 HERO */
 .hero {
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #0077cc, #00b3b3);
+  background: linear-gradient(135deg, #00b3b3, #0077cc);
   color: white;
+  text-align: center;
+  padding: 90px 20px;
 }
 
-.hero .btn {
-  background: white;
-  color: #0077cc;
-  padding: 10px 20px;
-  margin: 10px;
-  border-radius: 5px;
+.hero h1 {
+  font-size: 2.4em;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1em;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
+  transition: 0.3s;
 }
 
-.hero .btn.secondary {
-  background: transparent;
+.btn.primary {
+  background: white;
+  color: #0077cc;
+}
+
+.btn.secondary {
   border: 2px solid white;
   color: white;
 }
 
-section {
-  padding: 40px 20px;
+.btn:hover {
+  transform: scale(1.05);
 }
 
-h2 {
+/* 🔷 SECTIONS */
+.section {
+  padding: 60px 20px;
   text-align: center;
-  margin-bottom: 20px;
-  color: #0077cc;
 }
 
+.section.light {
+  background: #eef5f7;
+}
+
+.section h2 {
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+.section .subtitle {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.features {
+  list-style: none;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+/* 🔷 PLANS */
 .plans {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
+  margin-top: 20px;
 }
 
 .plan {
   background: white;
-  border-radius: 10px;
-  padding: 20px;
-  width: 220px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 25px;
+  width: 230px;
+  transition: 0.3s;
+}
+
+.plan.highlight {
+  border: 2px solid #00b3b3;
+  transform: scale(1.05);
+}
+
+.plan:hover {
+  transform: translateY(-5px);
+}
+
+.plan h3 {
+  color: #0077cc;
+}
+
+.plan h4 {
+  margin: 10px 0;
+  color: #00b3b3;
 }
 
 .plan button {
@@ -81,23 +157,29 @@ h2 {
   border: none;
   padding: 10px;
   width: 100%;
-  margin-top: 10px;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
+.plan button:hover {
+  background: #005fa3;
+}
+
+/* 🔷 FORMURI */
 .register-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  margin-top: 15px;
 }
 
 .register-form input {
   padding: 10px;
   width: 250px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 .register-form button {
@@ -105,18 +187,24 @@ h2 {
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
+.register-form button:hover {
+  background: #008a8a;
+}
+
+/* 🔷 CHATBOT */
 .chatbox {
-  width: 90%;
-  max-width: 500px;
-  margin: 0 auto;
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 15px;
+  width: 90%;
+  max-width: 550px;
+  margin: 0 auto;
 }
 
 #chatlog {
@@ -126,28 +214,59 @@ h2 {
   border-radius: 8px;
   padding: 10px;
   margin-bottom: 10px;
+  background: #f8f9fa;
+}
+
+.user-msg, .bot-msg {
+  margin: 6px 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  max-width: 85%;
 }
 
 .user-msg {
+  background: #e1f5fe;
   text-align: right;
-  background: #e0f7fa;
-  padding: 6px 10px;
-  margin: 4px 0;
-  border-radius: 8px;
+  margin-left: auto;
 }
 
 .bot-msg {
-  text-align: left;
   background: #f0f0f0;
-  padding: 6px 10px;
-  margin: 4px 0;
-  border-radius: 8px;
+  text-align: left;
+  margin-right: auto;
 }
 
-footer {
-  text-align: center;
+.chat-input {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.chat-input button {
   background: #0077cc;
   color: white;
-  padding: 15px;
-  margin-top: 30px;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background: #005fa3;
+}
+
+/* 🔷 FOOTER */
+footer {
+  background: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9em;
 }
