@@ -1,294 +1,363 @@
-/* ===========================
-   Pulsul Vieții - Neon Black
-   =========================== */
+/* ========================================================= */
+/*  PULSUL VIEȚII — STYLE.CSS                                */
+/*  Tema: Neon HealthTech (Dark Mode)                        */
+/*  Versiune aerisită și structurată                         */
+/* ========================================================= */
 
-:root{
-  --bg:#07060a;
-  --panel:#0f0f16;
-  --muted:#9aa4b2;
-  --glass: rgba(255,255,255,0.03);
 
-  /* neon colors */
-  --neon-free: #00e6ff;    /* turcoaz */
-  --neon-bronze:#ff7a00;   /* bronze/orange */
-  --neon-silver:#8be3ff;   /* pale cyan/silver */
-  --neon-gold:#ffd700;     /* gold/yellow */
+/* ---------- VARIABILE GLOBALE ---------- */
 
-  --card-shadow: 0 8px 30px rgba(0,0,0,0.6);
+:root {
+  --bg: #0a0a0f;
+  --text: #f1f1f1;
+  --accent: #08f7fe;
+  --secondary: #fe53bb;
+  --highlight: #00ff9f;
+
+  --gold: #ffcc00;
+  --bronze: #cd7f32;
+  --silver: #c0c0c0;
+  --free: #08f7fe;
+
+  --neon-glow: 0 0 10px var(--accent),
+               0 0 20px var(--accent),
+               0 0 40px var(--accent);
+
+  --font: 'Poppins', sans-serif;
 }
 
-/* ---------- Global ---------- */
-*{box-sizing:border-box}
-html,body{
-  height:100%;
-  margin:0;
-  font-family: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
-  background: linear-gradient(180deg,var(--bg) 0%, #050409 60%);
-  color: #e6eef6;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+
+/* ---------- RESET ---------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-/* ---------- Container / Layout ---------- */
-.container{
-  width: min(1200px, 94%);
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  line-height: 1.7;
+  padding-bottom: 60px;
+}
+
+
+/* ========================================================= */
+/*  HEADER                                                    */
+/* ========================================================= */
+
+header {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.neon-text {
+  font-size: 2.5rem;
+  color: var(--accent);
+  text-shadow: var(--neon-glow);
+  letter-spacing: 1px;
+  animation: pulse 3s infinite alternate;
+}
+
+@keyframes pulse {
+  from { text-shadow: 0 0 8px var(--accent); }
+  to   { text-shadow: 0 0 25px var(--accent); }
+}
+
+.tagline {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+
+/* ========================================================= */
+/*  NAVBAR                                                    */
+/* ========================================================= */
+
+.navbar {
+  margin-top: 1.5rem;
+}
+
+.navbar a {
+  color: var(--text);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: 0.3s;
+  position: relative;
+}
+
+.navbar a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: var(--accent);
+  width: 0;
   margin: 0 auto;
-  padding: 2.4rem 0;
+  transition: width 0.3s;
 }
 
-/* ---------- Header ---------- */
-.header {
-  padding: 18px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.03);
-  backdrop-filter: blur(6px);
-}
-.header .brand{
-  display:flex;
-  gap:12px;
-  align-items:center;
-}
-.brand .logo {
-  font-size:1.6rem;
-  padding:6px 10px;
-  border-radius:8px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  box-shadow: 0 6px 18px rgba(0,0,0,0.6), 0 0 18px rgba(0,0,0,0.5) inset;
-}
-.brand .title {
-  font-weight:700;
-  letter-spacing:0.6px;
-  color: #dff6ff;
-  text-shadow: 0 0 8px rgba(0,230,255,0.08);
+.navbar a:hover::after {
+  width: 100%;
 }
 
-/* ---------- HERO ---------- */
-.hero{
-  padding:48px 0;
-  text-align:center;
-}
-.hero h1{
-  font-size:2.2rem;
-  margin:0 0 10px;
-  color:var(--neon-free);
-  text-shadow: 0 0 18px rgba(0,230,255,0.14), 0 0 50px rgba(0,230,255,0.06);
-}
-.hero p{
-  color:var(--muted);
-  max-width:900px;
-  margin:0 auto 18px;
+
+/* ========================================================= */
+/*  HERO SECTION                                              */
+/* ========================================================= */
+
+.hero {
+  background: linear-gradient(145deg, #0d0d14, #111122);
+  text-align: center;
+  padding: 5rem 2rem;
 }
 
-/* ---------- Info Sections ---------- */
-.section{
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border: 1px solid rgba(255,255,255,0.03);
-  padding: 28px;
-  border-radius: 12px;
-  margin-bottom: 28px;
-  box-shadow: var(--card-shadow);
+.hero h2 {
+  font-size: 2rem;
+  color: var(--highlight);
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px var(--highlight);
 }
 
-/* ---------- Plans (grid) ---------- */
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #bbb;
+}
+
+
+/* ---------- BUTOANE ---------- */
+
+.btn {
+  background: var(--accent);
+  color: #000;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  box-shadow: var(--neon-glow);
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  background: var(--secondary);
+  color: #fff;
+}
+
+
+/* ========================================================= */
+/*  SECȚIUNI GENERALE                                         */
+/* ========================================================= */
+
+.content-section {
+  padding: 5rem 10%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.content-section.alt {
+  background: #111;
+  border-radius: 20px;
+  padding: 4rem 10%;
+}
+
+.content-section h2 {
+  color: var(--accent);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: 0 0 10px var(--accent);
+}
+
+.content-section p {
+  color: #ddd;
+  font-size: 1.05rem;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+
+/* ========================================================= */
+/*  GRID STRUCTURE                                            */
+/* ========================================================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: rgba(20, 20, 30, 0.9);
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px var(--accent);
+}
+
+
+/* ========================================================= */
+/*  PLANURI / ABONAMENTE                                      */
+/* ========================================================= */
+
 .plans {
-  display:grid;
-  gap:20px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  margin-top:18px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
 }
 
-/* Generic plan card */
-.plan{
-  background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(0,0,0,0.15));
-  border: 1px solid rgba(255,255,255,0.03);
-  padding:20px;
-  border-radius:14px;
-  transition: transform .28s cubic-bezier(.2,.9,.3,1), box-shadow .28s, border-color .28s;
-  position:relative;
-  overflow:visible;
-  min-height:160px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
+.plan {
+  background: #12121a;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
 }
 
-/* small neon accent line at top */
-.plan::before{
-  content:"";
-  position:absolute;
-  left:12px;
-  right:12px;
-  top:12px;
-  height:3px;
-  border-radius:6px;
-  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  opacity:.3;
+.plan h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
-/* Title and body */
-.plan h3{
-  margin:8px 0 6px;
-  font-size:1.15rem;
-  letter-spacing:0.3px;
-  color:#eafcff;
-}
-.plan p{
-  color: #bcd6e6;
-  font-size:0.95rem;
-  margin:0 0 12px;
-  line-height:1.45;
-}
-.plan .price{
-  font-weight:700;
-  color:#ffffff;
-  margin-top:8px;
+.plan p {
+  color: #ccc;
+  margin-bottom: 1rem;
 }
 
-/* Hover base effect (glow + lift) */
-.plan:hover{
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.65), 0 0 40px rgba(0,0,0,0.5) inset;
-  border-color: rgba(255,255,255,0.08);
+
+/* ---------- HOVER PERSONALIZAT PE PACHETE ---------- */
+
+.plan:nth-child(1):hover {
+  box-shadow: 0 0 25px var(--free);
+  border-color: var(--free);
 }
 
-/* ---------- Neon color variants ---------- */
-/* Free */
-.plan.free { border-color: rgba(0,230,255,0.08); }
-.plan.free::after{
-  content:"FREE";
-  position:absolute;
-  right:12px;
-  top:12px;
-  font-size:0.72rem;
-  font-weight:700;
-  padding:6px 10px;
-  border-radius:8px;
-  color:var(--neon-free);
-  background: linear-gradient(90deg, rgba(0,230,255,0.04), rgba(0,230,255,0.02));
-  box-shadow: 0 0 18px rgba(0,230,255,0.12);
+.plan:nth-child(2):hover {
+  box-shadow: 0 0 25px var(--bronze);
+  border-color: var(--bronze);
 }
 
-/* Bronze */
-.plan.bronze { border-color: rgba(255,122,0,0.08); }
-.plan.bronze::after{
-  content:"BRONZE";
-  position:absolute;
-  right:12px;
-  top:12px;
-  font-size:0.72rem;
-  font-weight:700;
-  padding:6px 10px;
-  border-radius:8px;
-  color:var(--neon-bronze);
-  background: linear-gradient(90deg, rgba(255,122,0,0.04), rgba(255,122,0,0.02));
-  box-shadow: 0 0 18px rgba(255,122,0,0.12);
+.plan:nth-child(3):hover {
+  box-shadow: 0 0 25px var(--silver);
+  border-color: var(--silver);
 }
 
-/* Silver */
-.plan.silver { border-color: rgba(139,227,255,0.08); }
-.plan.silver::after{
-  content:"SILVER";
-  position:absolute;
-  right:12px;
-  top:12px;
-  font-size:0.72rem;
-  font-weight:700;
-  padding:6px 10px;
-  border-radius:8px;
-  color:var(--neon-silver);
-  background: linear-gradient(90deg, rgba(139,227,255,0.04), rgba(139,227,255,0.02));
-  box-shadow: 0 0 18px rgba(139,227,255,0.12);
+.plan:nth-child(4):hover {
+  box-shadow: 0 0 25px var(--gold);
+  border-color: var(--gold);
 }
 
-/* Gold */
-.plan.gold { border-color: rgba(255,215,0,0.08); }
-.plan.gold::after{
-  content:"GOLD";
-  position:absolute;
-  right:12px;
-  top:12px;
-  font-size:0.72rem;
-  font-weight:700;
-  padding:6px 10px;
-  border-radius:8px;
-  color:var(--neon-gold);
-  background: linear-gradient(90deg, rgba(255,215,0,0.04), rgba(255,215,0,0.02));
-  box-shadow: 0 0 18px rgba(255,215,0,0.12);
+.highlight {
+  border-color: var(--bronze);
 }
 
-/* ---------- Hover: colored glow per variant ---------- */
-.plan.free:hover {
-  border-color: rgba(0,230,255,0.45);
-  box-shadow:
-    0 30px 80px rgba(0,0,0,0.7),
-    0 0 40px rgba(0,230,255,0.12),
-    0 0 70px rgba(0,230,255,0.08) inset;
-}
-.plan.free:hover h3 { text-shadow: 0 0 10px var(--neon-free); }
-.plan.free:hover::before{
-  background: linear-gradient(90deg, var(--neon-free), rgba(0,230,255,0.1));
+.premium {
+  border-color: var(--gold);
 }
 
-/* Bronze hover */
-.plan.bronze:hover {
-  border-color: rgba(255,122,0,0.45);
-  box-shadow:
-    0 30px 80px rgba(0,0,0,0.7),
-    0 0 40px rgba(255,122,0,0.12),
-    0 0 70px rgba(255,122,0,0.06) inset;
-}
-.plan.bronze:hover h3 { text-shadow: 0 0 10px var(--neon-bronze); }
-.plan.bronze:hover::before{
-  background: linear-gradient(90deg, var(--neon-bronze), rgba(255,122,0,0.1));
+
+/* ========================================================= */
+/*  BONUS INFO                                                */
+/* ========================================================= */
+
+.bonus-info {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
 }
 
-/* Silver hover */
-.plan.silver:hover {
-  border-color: rgba(139,227,255,0.45);
-  box-shadow:
-    0 30px 80px rgba(0,0,0,0.7),
-    0 0 40px rgba(139,227,255,0.12),
-    0 0 70px rgba(139,227,255,0.06) inset;
-}
-.plan.silver:hover h3 { text-shadow: 0 0 10px var(--neon-silver); }
-.plan.silver:hover::before{
-  background: linear-gradient(90deg, var(--neon-silver), rgba(139,227,255,0.1));
+
+/* ========================================================= */
+/*  FORMULAR DE CONTACT                                       */
+/* ========================================================= */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: auto;
 }
 
-/* Gold hover */
-.plan.gold:hover {
-  border-color: rgba(255,215,0,0.45);
-  box-shadow:
-    0 30px 80px rgba(0,0,0,0.7),
-    0 0 40px rgba(255,215,0,0.12),
-    0 0 70px rgba(255,215,0,0.06) inset;
-}
-.plan.gold:hover h3 { text-shadow: 0 0 12px var(--neon-gold); }
-.plan.gold:hover::before{
-  background: linear-gradient(90deg, var(--neon-gold), rgba(255,215,0,0.1));
+.contact-form input,
+.contact-form textarea {
+  background: #1a1a1f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.8rem;
+  color: #fff;
+  width: 100%;
+  font-size: 1rem;
 }
 
-/* ---------- Buttons inside plan ---------- */
-.plan .cta{
-  display:inline-block;
-  margin-top:12px;
-  padding:10px 14px;
-  border-radius:10px;
-  background: rgba(255,255,255,0.03);
-  color: #e9f9ff;
-  border:1px solid rgba(255,255,255,0.04);
-  transition: background .2s, box-shadow .2s, transform .15s;
+.contact-form button {
+  align-self: center;
 }
-.plan .cta:hover { transform: translateY(-3px); }
 
-/* variant-specific CTA glow */
-.plan.free .cta:hover{ box-shadow: 0 8px 30px rgba(0,230,255,0.12) }
-.plan.bronze .cta:hover{ box-shadow: 0 8px 30px rgba(255,122,0,0.12) }
-.plan.silver .cta:hover{ box-shadow: 0 8px 30px rgba(139,227,255,0.12) }
-.plan.gold .cta:hover{ box-shadow: 0 8px 30px rgba(255,215,0,0.12) }
 
-/* ---------- Responsive tweaks ---------- */
-@media (max-width:720px){
-  .hero h1{ font-size:1.6rem }
-  .plans { grid-template-columns: 1fr; }
-  .plan{ min-height:unset; }
+/* ========================================================= */
+/*  FOOTER                                                    */
+/* ========================================================= */
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  color: #aaa;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* ========================================================= */
+/*  RESPONSIVE DESIGN                                         */
+/* ========================================================= */
+
+@media (max-width: 768px) {
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .content-section {
+    padding: 3rem 6%;
+  }
 }
