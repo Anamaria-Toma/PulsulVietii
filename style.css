@@ -1,7 +1,7 @@
-/* ==========================================================
-   PULSUL VIEȚII — STYLE.CSS
-   Tema: Dark Mode Neon HealthTech
-   ========================================================== */
+/* ------------------------- */
+/* PULSUL VIEȚII — STYLE.CSS */
+/* Tema: Neon HealthTech (Dark Mode) */
+/* ------------------------- */
 
 :root {
   --bg: #0a0a0f;
@@ -32,11 +32,11 @@ body {
   padding-bottom: 60px;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 header {
   text-align: center;
   padding: 2.5rem 1rem;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .logo {
@@ -65,7 +65,7 @@ header {
   color: #ccc;
 }
 
-/* ================= NAVBAR ================= */
+/* NAVBAR */
 .navbar {
   margin-top: 1.5rem;
 }
@@ -93,7 +93,7 @@ header {
   width: 100%;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 .hero {
   background: linear-gradient(145deg, #0d0d14, #111122);
   text-align: center;
@@ -111,13 +111,6 @@ header {
   max-width: 700px;
   margin: 0 auto 2rem;
   color: #bbb;
-}
-
-.hero .buttons {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
 }
 
 .btn {
@@ -141,7 +134,7 @@ header {
   color: #fff;
 }
 
-/* ================= SECTIONS ================= */
+/* SECTIONS */
 .content-section {
   padding: 5rem 10%;
   max-width: 1200px;
@@ -169,7 +162,7 @@ header {
   text-align: justify;
 }
 
-/* ================= STRUCTURA ================= */
+/* STRUCTURA */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -178,10 +171,10 @@ header {
 }
 
 .card {
-  background: rgba(20,20,30,0.9);
+  background: rgba(20, 20, 30, 0.9);
   border-radius: 15px;
   padding: 1.5rem;
-  box-shadow: 0 0 10px rgba(0,255,255,0.2);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
   transition: all 0.4s;
 }
 
@@ -190,7 +183,7 @@ header {
   box-shadow: 0 0 25px var(--accent);
 }
 
-/* ================= ABONAMENTE ================= */
+/* ABONAMENTE */
 .plans {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -204,7 +197,7 @@ header {
   padding: 2rem;
   text-align: center;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .plan h3 {
@@ -218,37 +211,39 @@ header {
   margin-bottom: 1rem;
 }
 
-.price {
-  font-weight: bold;
-  color: #fff;
-  font-size: 1.1rem;
-  margin-top: 0.5rem;
-}
-
-/* Hover specific pe pachete */
+/* HOVER COLOR SPECIFIC PE PACHETE */
 .plan:nth-child(1):hover {
   box-shadow: 0 0 25px var(--free);
   border-color: var(--free);
 }
+
 .plan:nth-child(2):hover {
   box-shadow: 0 0 25px var(--bronze);
   border-color: var(--bronze);
 }
+
 .plan:nth-child(3):hover {
   box-shadow: 0 0 25px var(--silver);
   border-color: var(--silver);
 }
+
 .plan:nth-child(4):hover {
   box-shadow: 0 0 25px var(--gold);
   border-color: var(--gold);
 }
 
-.highlight { border-color: var(--bronze); }
-.premium { border-color: var(--gold); }
+.highlight {
+  border-color: var(--bronze);
+}
 
+.premium {
+  border-color: var(--gold);
+}
+
+/* BONUS INFO */
 .bonus-info {
   margin-top: 2rem;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   padding: 1.5rem;
   font-size: 1rem;
@@ -257,7 +252,7 @@ header {
   color: #ccc;
 }
 
-/* ================= FORM ================= */
+/* FORM */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -269,7 +264,7 @@ header {
 .contact-form input,
 .contact-form textarea {
   background: #1a1a1f;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   padding: 0.8rem;
   color: #fff;
@@ -281,31 +276,30 @@ header {
   align-self: center;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 2rem 1rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 3rem;
   color: #aaa;
   font-size: 0.9rem;
 }
 
-/* ================= RESPONSIVE ================= */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .hero h2 {
     font-size: 1.6rem;
   }
+
   .navbar {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.8rem;
   }
+
   .content-section {
     padding: 3rem 6%;
-  }
-  .hero .buttons {
-    flex-direction: column;
   }
 }
