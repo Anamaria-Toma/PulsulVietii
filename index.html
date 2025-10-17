@@ -1,305 +1,164 @@
-/* ------------------------- */
-/* PULSUL VIEȚII — STYLE.CSS */
-/* Tema: Neon HealthTech (Dark Mode) */
-/* ------------------------- */
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulsul Vieții — AI pentru Sănătate</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png">
+</head>
+<body>
 
-:root {
-  --bg: #0a0a0f;
-  --text: #f1f1f1;
-  --accent: #08f7fe;
-  --secondary: #fe53bb;
-  --highlight: #00ff9f;
-  --gold: #ffcc00;
-  --bronze: #cd7f32;
-  --silver: #c0c0c0;
-  --free: #08f7fe;
-  --neon-glow: 0 0 10px var(--accent), 0 0 20px var(--accent), 0 0 40px var(--accent);
-  --font: 'Poppins', sans-serif;
-}
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="logo">🩺 Pulsul Vieții</div>
+    <nav>
+      <a href="#despre">Despre</a>
+      <a href="#abonamente">Abonamente</a>
+      <a href="#functie">Funcționalități</a>
+      <a href="#chatbot">ChatBot</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>AI pentru Sănătate</h1>
+      <p>Platforma care te conectează instant cu medicii potriviți, 24/7, oriunde te afli.</p>
+      <div class="hero-buttons">
+        <a href="#pacienti" class="btn">Înscriere Pacient</a>
+        <a href="#medici" class="btn secondary">Înscriere Medic</a>
+      </div>
+    </div>
+  </section>
 
-body {
-  background-color: var(--bg);
-  color: var(--text);
-  font-family: var(--font);
-  line-height: 1.7;
-  padding-bottom: 60px;
-}
+  <!-- DESPRE -->
+  <section id="despre" class="info-section">
+    <h2>Despre aplicație</h2>
+    <p>
+      „Pulsul Vieții” este o aplicație inteligentă ce oferă asistență medicală digitală în timp real.  
+      Cu ajutorul AI-ului integrat și al colaborării directe cu medici acreditați, pacienții pot primi
+      sfaturi personalizate, pot face programări, pot încărca analize și pot primi monitorizare continuă.
+    </p>
+    <div class="info-grid">
+      <div>
+        <h3>🔐 Autentificare sigură</h3>
+        <p>Prin CNP, număr de telefon și date de contact ale unui apropiat — fără parole inutile.</p>
+      </div>
+      <div>
+        <h3>🦻 Accesibil pentru toți</h3>
+        <p>Mod audio pentru nevăzători, interfață clară pentru vârstnici, și ghid pas cu pas de utilizare.</p>
+      </div>
+      <div>
+        <h3>📍 Localizare inteligentă</h3>
+        <p>Aplicația detectează automat locația pentru a recomanda medici și clinici apropiate.</p>
+      </div>
+    </div>
+  </section>
 
-/* HEADER */
-header {
-  text-align: center;
-  padding: 2.5rem 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
+  <!-- ABONAMENTE -->
+  <section id="abonamente" class="plans">
+    <h2>Planuri de abonament</h2>
+    <div class="plan-cards">
+      <div class="card">
+        <h3>Free</h3>
+        <p>AI medical de bază, remedii naturiste și recomandări generale.</p>
+        <span class="price">Gratuit</span>
+        <button>Începe acum</button>
+      </div>
 
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-}
+      <div class="card">
+        <h3>Bronze</h3>
+        <p>Acces la reviste medicale, recomandări simple și programări rapide.</p>
+        <span class="price">19 RON/lună</span>
+        <button>Activează</button>
+      </div>
 
-.neon-text {
-  font-size: 2.5rem;
-  color: var(--accent);
-  text-shadow: var(--neon-glow);
-  letter-spacing: 1px;
-  animation: pulse 3s infinite alternate;
-}
+      <div class="card highlight">
+        <h3>Silver</h3>
+        <p>Chat direct cu medici, interpretarea analizelor și consiliere medicală extinsă.</p>
+        <span class="price">49 RON/lună</span>
+        <button>Activează</button>
+      </div>
 
-@keyframes pulse {
-  from { text-shadow: 0 0 8px var(--accent); }
-  to { text-shadow: 0 0 25px var(--accent); }
-}
+      <div class="card gold">
+        <h3>Gold</h3>
+        <p>Apel video cu medici, rețete, psiholog, nutriționist și monitorizare 24/7.</p>
+        <span class="price">99 RON/lună</span>
+        <button>Abonează-te</button>
+      </div>
+    </div>
+    <p class="discounts">
+      Pensionarii, persoanele cu handicap și adolescenții orfani beneficiază de gratuitate completă.<br>
+      Studenții au reducere de <strong>20%</strong> la orice abonament.
+    </p>
+  </section>
 
-.tagline {
-  margin-top: 10px;
-  font-size: 1.1rem;
-  color: #ccc;
-}
+  <!-- FUNCȚIONALITĂȚI -->
+  <section id="functie" class="features">
+    <h2>Funcționalități principale</h2>
+    <div class="feature-grid">
+      <div>💬 Chat AI și consult medical</div>
+      <div>📅 Programări automate și notificări</div>
+      <div>❤️ Monitorizare tensiune și glicemie</div>
+      <div>🔔 Reminder tratamente și chestionare zilnice</div>
+      <div>📸 Trimitere imagini (iritații, analize etc.)</div>
+      <div>📖 Ghid complet de utilizare</div>
+    </div>
+  </section>
 
-/* NAVBAR */
-.navbar {
-  margin-top: 1.5rem;
-}
+  <!-- CHATBOT -->
+  <section id="chatbot" class="chat-section">
+    <h2>Asistent Virtual AI</h2>
+    <p>Scrie simptomele tale mai jos, iar AI-ul nostru îți va recomanda analize și medici potriviți.</p>
+    <div class="chatbox">
+      <div id="chatlog"></div>
+      <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Ex: am febră și dureri de cap...">
+        <button onclick="sendMessage()">Trimite</button>
+      </div>
+    </div>
+  </section>
 
-.navbar a {
-  color: var(--text);
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: 500;
-  transition: 0.3s;
-  position: relative;
-}
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <h2>Contact și Parteneriate</h2>
+    <p>Suntem în colaborare cu spitale publice și private din întreaga țară.  
+    Pentru informații suplimentare sau parteneriate:</p>
+    <ul>
+      <li>📧 <a href="mailto:contact@pulsulvietii.ro">contact@pulsulvietii.ro</a></li>
+      <li>📞 +40 728 123 456</li>
+      <li>🏢 București, România</li>
+    </ul>
+  </section>
 
-.navbar a::after {
-  content: '';
-  display: block;
-  height: 2px;
-  background: var(--accent);
-  transition: width 0.3s;
-  width: 0;
-  margin: 0 auto;
-}
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Pulsul Vieții — Toate drepturile rezervate</p>
+    <p>O soluție inteligentă pentru o lume mai sănătoasă.</p>
+  </footer>
 
-.navbar a:hover::after {
-  width: 100%;
-}
+  <script>
+    function sendMessage() {
+      const input = document.getElementById("userInput");
+      const log = document.getElementById("chatlog");
+      const userText = input.value.trim();
+      if (!userText) return;
+      log.innerHTML += `<div class='user-msg'>👤 ${userText}</div>`;
+      input.value = "";
 
-/* HERO */
-.hero {
-  background: linear-gradient(145deg, #0d0d14, #111122);
-  text-align: center;
-  padding: 5rem 2rem;
-}
+      let response = "Îți recomandăm să consulți un medic generalist.";
+      if (userText.includes("febr") || userText.includes("durere")) response = "Posibilă infecție — recomandăm analize de sânge și consult la medic internist.";
+      if (userText.includes("inim") || userText.includes("tensiune")) response = "Recomandăm un consult cardiologic și un EKG.";
+      if (userText.includes("stomac") || userText.includes("greata")) response = "Recomandăm analize gastroenterologice.";
 
-.hero h2 {
-  font-size: 2rem;
-  color: var(--highlight);
-  margin-bottom: 1rem;
-  text-shadow: 0 0 10px var(--highlight);
-}
+      setTimeout(() => {
+        log.innerHTML += `<div class='bot-msg'>🤖 ${response}</div>`;
+        log.scrollTop = log.scrollHeight;
+      }, 600);
+    }
+  </script>
 
-.hero p {
-  max-width: 700px;
-  margin: 0 auto 2rem;
-  color: #bbb;
-}
-
-.btn {
-  background: var(--accent);
-  color: #000;
-  padding: 0.8rem 2rem;
-  border-radius: 25px;
-  font-weight: bold;
-  transition: all 0.3s;
-  border: none;
-  cursor: pointer;
-}
-
-.btn:hover {
-  box-shadow: var(--neon-glow);
-  transform: translateY(-2px);
-}
-
-.btn.secondary {
-  background: var(--secondary);
-  color: #fff;
-}
-
-/* SECTIONS */
-.content-section {
-  padding: 5rem 10%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.content-section.alt {
-  background: #111;
-  border-radius: 20px;
-  padding: 4rem 10%;
-}
-
-.content-section h2 {
-  color: var(--accent);
-  margin-bottom: 1.5rem;
-  font-size: 1.8rem;
-  text-align: center;
-  text-shadow: 0 0 10px var(--accent);
-}
-
-.content-section p {
-  margin-bottom: 1rem;
-  color: #ddd;
-  font-size: 1.05rem;
-  text-align: justify;
-}
-
-/* STRUCTURA */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.card {
-  background: rgba(20, 20, 30, 0.9);
-  border-radius: 15px;
-  padding: 1.5rem;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
-  transition: all 0.4s;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 25px var(--accent);
-}
-
-/* ABONAMENTE */
-.plans {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 2rem;
-  margin-top: 2.5rem;
-}
-
-.plan {
-  background: #12121a;
-  border-radius: 15px;
-  padding: 2rem;
-  text-align: center;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.plan h3 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-}
-
-.plan p {
-  color: #ccc;
-  margin-bottom: 1rem;
-}
-
-/* HOVER COLOR SPECIFIC PE PACHETE */
-.plan:nth-child(1):hover {
-  box-shadow: 0 0 25px var(--free);
-  border-color: var(--free);
-}
-
-.plan:nth-child(2):hover {
-  box-shadow: 0 0 25px var(--bronze);
-  border-color: var(--bronze);
-}
-
-.plan:nth-child(3):hover {
-  box-shadow: 0 0 25px var(--silver);
-  border-color: var(--silver);
-}
-
-.plan:nth-child(4):hover {
-  box-shadow: 0 0 25px var(--gold);
-  border-color: var(--gold);
-}
-
-.highlight {
-  border-color: var(--bronze);
-}
-
-.premium {
-  border-color: var(--gold);
-}
-
-/* BONUS INFO */
-.bonus-info {
-  margin-top: 2rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  padding: 1.5rem;
-  font-size: 1rem;
-  text-align: center;
-  line-height: 1.6;
-  color: #ccc;
-}
-
-/* FORM */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 600px;
-  margin: auto;
-}
-
-.contact-form input,
-.contact-form textarea {
-  background: #1a1a1f;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  padding: 0.8rem;
-  color: #fff;
-  width: 100%;
-  font-size: 1rem;
-}
-
-.contact-form button {
-  align-self: center;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: 3rem;
-  color: #aaa;
-  font-size: 0.9rem;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 1.6rem;
-  }
-
-  .navbar {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.8rem;
-  }
-
-  .content-section {
-    padding: 3rem 6%;
-  }
-}
+</body>
+</html>
