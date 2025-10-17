@@ -8,9 +8,11 @@
 </head>
 <body>
 
-  <header>
-    <h1>MediConnect</h1>
+  <!-- 🔷 HEADER -->
+  <header class="header">
+    <div class="logo">🩺 <span>MediConnect</span></div>
     <nav>
+      <a href="#despre">Despre</a>
       <a href="#pachete">Pachete</a>
       <a href="#medici">Medici</a>
       <a href="#pacienti">Pacienți</a>
@@ -18,76 +20,104 @@
     </nav>
   </header>
 
+  <!-- 🔷 HERO SECTION -->
   <section class="hero">
-    <h2>Conectăm pacienții cu medicii potriviți</h2>
-    <p>Înscrie-te pentru a avea acces la servicii medicale personalizate, în funcție de nevoile tale.</p>
-    <div class="buttons">
-      <a href="#pacienti" class="btn">Înscriere Pacient</a>
-      <a href="#medici" class="btn secondary">Înscriere Medic</a>
+    <div class="hero-content">
+      <h1>Conectăm pacienții cu medicii potriviți</h1>
+      <p>Platforma modernă care reunește pacienți, medici și clinici din toate specializările, oferind acces rapid la consultații, analize și recomandări personalizate.</p>
+      <div class="buttons">
+        <a href="#pacienti" class="btn primary">Înscriere Pacient</a>
+        <a href="#medici" class="btn secondary">Înscriere Medic</a>
+      </div>
     </div>
   </section>
 
-  <section id="pachete">
+  <!-- 🔷 DESPRE -->
+  <section id="despre" class="section light">
+    <h2>Ce este MediConnect?</h2>
+    <p>MediConnect este o platformă digitală dedicată tuturor sistemelor medicale – publice și private – care permite:</p>
+    <ul class="features">
+      <li>✔️ Conectarea pacienților cu medici certificați din diverse specializări.</li>
+      <li>✔️ Recomandări automate de analize și consultații pe baza simptomelor introduse.</li>
+      <li>✔️ Gestionarea planurilor medicale și a istoricului pacientului într-un singur loc.</li>
+    </ul>
+  </section>
+
+  <!-- 🔷 PACHETE -->
+  <section id="pachete" class="section">
     <h2>Pachete de servicii</h2>
+    <p class="subtitle">Alege planul potrivit pentru nevoile tale medicale.</p>
     <div class="plans">
       <div class="plan">
         <h3>Free</h3>
-        <p>Acces la chat și recomandări medicale de bază.</p>
+        <p>Acces la chatbot și recomandări de bază.</p>
+        <h4>0 RON / lună</h4>
         <button>Începe gratuit</button>
       </div>
-      <div class="plan">
+      <div class="plan highlight">
         <h3>Premium</h3>
-        <p>Consultații online cu medici certificați.</p>
+        <p>Consultații video și suport 24/7 cu specialiști.</p>
+        <h4>49 RON / lună</h4>
         <button>Activează Premium</button>
       </div>
       <div class="plan">
         <h3>Professional</h3>
-        <p>Acces prioritar și asistent medical dedicat.</p>
+        <p>Acces prioritar, medic dedicat și rapoarte avansate.</p>
+        <h4>89 RON / lună</h4>
         <button>Detalii</button>
       </div>
       <div class="plan">
         <h3>Enterprise</h3>
-        <p>Servicii pentru clinici și rețele medicale.</p>
-        <button>Contactează-ne</button>
+        <p>Solutii personalizate pentru clinici și spitale.</p>
+        <h4>Contactează-ne</h4>
+        <button>Solicită ofertă</button>
       </div>
     </div>
   </section>
 
-  <section id="medici">
+  <!-- 🔷 INSCRIERE MEDICI -->
+  <section id="medici" class="section light">
     <h2>Înscriere pentru medici</h2>
+    <p>Fii parte din rețeaua noastră profesională. Completează formularul pentru a-ți crea profilul medical.</p>
     <form class="register-form">
-      <input type="text" placeholder="Nume complet">
-      <input type="email" placeholder="Email profesional">
-      <input type="text" placeholder="Specializare (ex: cardiologie)">
-      <button type="submit">Trimite</button>
+      <input type="text" placeholder="Nume complet" required>
+      <input type="email" placeholder="Email profesional" required>
+      <input type="text" placeholder="Specializare (ex: cardiologie)" required>
+      <button type="submit">Înregistrează-te</button>
     </form>
   </section>
 
-  <section id="pacienti">
+  <!-- 🔷 INSCRIERE PACIENTI -->
+  <section id="pacienti" class="section">
     <h2>Înscriere pentru pacienți</h2>
+    <p>Accesează rapid recomandări medicale și programează consultații online.</p>
     <form class="register-form">
-      <input type="text" placeholder="Nume complet">
-      <input type="email" placeholder="Email">
-      <input type="text" placeholder="CNP sau ID pacient">
-      <button type="submit">Trimite</button>
+      <input type="text" placeholder="Nume complet" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="CNP sau ID pacient" required>
+      <button type="submit">Creează cont</button>
     </form>
   </section>
 
-  <section id="chatbot">
+  <!-- 🔷 CHATBOT -->
+  <section id="chatbot" class="section light">
     <h2>Asistent medical virtual</h2>
+    <p>Scrie simptomele tale și primește recomandări automate pentru analize și specialități medicale potrivite.</p>
     <div class="chatbox">
       <div id="chatlog"></div>
       <div class="chat-input">
-        <input type="text" id="userInput" placeholder="Descrie simptomele tale...">
+        <input type="text" id="userInput" placeholder="Descrie simptomele tale..." onkeydown="if(event.key==='Enter') sendMessage()">
         <button onclick="sendMessage()">Trimite</button>
       </div>
     </div>
   </section>
 
+  <!-- 🔷 FOOTER -->
   <footer>
-    <p>© 2025 MediConnect — Toate drepturile rezervate</p>
+    <p>© 2025 MediConnect — Platformă dezvoltată pentru conectarea pacienților și medicilor. Toate drepturile rezervate.</p>
   </footer>
 
+  <!-- 🔷 SCRIPT CHATBOT -->
   <script>
     function sendMessage() {
       const input = document.getElementById("userInput");
@@ -95,23 +125,26 @@
       const userText = input.value.trim();
       if (userText === "") return;
 
-      log.innerHTML += `<div class='user-msg'>👤 ${userText}</div>`;
+      log.innerHTML += `<div class='user-msg'>👤 <strong>Tu:</strong> ${userText}</div>`;
       input.value = "";
 
-      // Simplu "AI" local cu reguli de bază
-      let response = "Îți recomandăm să consulți un medic generalist.";
-      if (userText.includes("durere") || userText.includes("febra")) {
-        response = "Posibilă infecție — recomandăm analize de sânge și consult la medic internist.";
-      } else if (userText.includes("inima") || userText.includes("tensiune")) {
-        response = "Recomandăm un consult cardiologic și EKG.";
-      } else if (userText.includes("stomac") || userText.includes("greata")) {
-        response = "Recomandăm analize gastroenterologice.";
+      let response = "🤖 Recomandăm un control medical general.";
+      const text = userText.toLowerCase();
+
+      if (text.includes("durere") || text.includes("febra") || text.includes("infectie")) {
+        response = "🤖 Posibilă infecție — recomandăm analize de sânge și consult la medic internist.";
+      } else if (text.includes("inima") || text.includes("tensiune") || text.includes("palpitatii")) {
+        response = "🤖 Recomandăm un consult cardiologic și un EKG.";
+      } else if (text.includes("stomac") || text.includes("greata") || text.includes("arsuri")) {
+        response = "🤖 Recomandăm analize gastroenterologice.";
+      } else if (text.includes("piele") || text.includes("iritatie") || text.includes("eczema")) {
+        response = "🤖 Recomandăm un consult dermatologic.";
       }
 
       setTimeout(() => {
-        log.innerHTML += `<div class='bot-msg'>🤖 ${response}</div>`;
+        log.innerHTML += `<div class='bot-msg'>${response}</div>`;
         log.scrollTop = log.scrollHeight;
-      }, 500);
+      }, 400);
     }
   </script>
 
